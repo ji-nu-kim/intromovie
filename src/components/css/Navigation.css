@@ -1,0 +1,33 @@
+.nav__container {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;  
+  height: 44px;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.nav__inner {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a {
+  color: #f5f5f7;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.nav__logo {
+  background: url("../image/logo_footer.svg");  
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px;
+  display: block;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import "./Movie.css"
+import "./css/Movie.css"
 
 Movie.propTypes = {
   year: PropTypes.number.isRequired,
@@ -11,14 +11,19 @@ Movie.propTypes = {
   genres: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
-function Movie({ year, title, summary, poster, genres, id }) {
+function Movie({
+  year, title, rating,
+  summary, poster,
+  genres, id, bgImage,
+  originalImage, language }) {
   return (
     <div className="movie__container">
       <Link to={{
         pathname: `/movie/${id}`,
         state: {
           year, title, genres,
-          summary, poster
+          summary, poster, bgImage,
+          rating, language, originalImage
         }
       }}>
         <div className="movie">

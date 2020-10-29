@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Movie from '../components/Movie';
-import "./Home.css"
+import "./css/Home.css"
 
 class Home extends React.Component {
   state = {
@@ -33,6 +33,9 @@ class Home extends React.Component {
                 key={movie.id} year={movie.year}
                 poster={movie.medium_cover_image}
                 summary={movie.summary} title={movie.title}
+                bgImage={movie.large_cover_image}
+                originalImage={movie.background_image}
+                language={movie.language} rating={movie.rating}
               />
             ))}
           </div>
