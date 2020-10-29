@@ -7,11 +7,11 @@ function Navigation() {
     <div className="nav__container">
       <div className="nav__inner">
         <Link className="nav__logo" to="/">logo</Link>
-        <Link to="">New</Link>
-        <Link to="">Best</Link>
-        <Link to="">Choice</Link>
+        <Link to="#">New</Link>
+        <Link to="#">Best</Link>
+        <Link to="#">Choice</Link>
         <Link to="/about">About</Link>
-        <Link to="">Support</Link>
+        <Link to="#">Support</Link>
       </div>
     </div>
   )
