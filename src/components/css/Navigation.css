@@ -1,33 +1,117 @@
-.nav__container {
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  display: flex;
-  justify-content: center;  
-  height: 44px;
-  background-color: rgba(0, 0, 0, .8);
+a {
+  color: #fff;
 }
 
-.nav__inner {
+.navigation__navbar {
+  width: 100%;
+  background-color: rgb(52, 55, 66);
+  position: fixed;
+  z-index: 10;
+}
+
+.navigation__inner {
   width: 50%;
-  height: 100%;
+  min-width: 768px;
+  height: 66px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
-a {
-  color: #f5f5f7;
-  font-size: 14px;
-  padding: 5px;
+.navigation__logo,
+.navigation__menu,
+.navigation__check {
+  width: 100%;
 }
 
-.nav__logo {
-  background: url("../image/logo_footer.svg");  
-  background-repeat: no-repeat;
-  background-position: center;
-  text-indent: -9999px;
-  width: 32px;
-  height: 32px;
+.navigation__menu {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation__check {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation__menu li a,
+.navigation__check a {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.navigation__check a {
   display: block;
+  color: #aeb5c2;
+}
+
+.navigation__check a:hover {
+  opacity: 0.5;
+}
+
+.navigation__check a:nth-child(2) {
+  margin-left: 16px;
+}
+
+.navigation__togglebtn {  
+  position: absolute;
+  right: 12px;
+  font-size: 24px;
+  display: none;
+} 
+
+@media (max-width: 768px) {     
+  .navigation__inner {
+    width: 100%;
+    margin: 0;
+    min-width: 0;
+    flex-direction: column;
+    height: auto;
+    padding: 12px;
+  }  
+
+  .navigation__menu {    
+    line-height: 3rem;
+    border-top: 1px solid rgba(235, 235, 235, 0.4);
+    border-bottom: 1px solid rgba(235, 235, 235, 0.4);
+    flex-direction: column;
+    display: none;    
+  }
+
+  .navigation__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation__menu li:hover {    
+    background-color: rosybrown;
+  }
+
+  .navigation__check {
+    display: none;
+    text-align: center;
+  }
+
+  .navigation__check a:nth-child(1) {
+    margin-bottom: 12px;
+  }
+
+  .navigation__check a:nth-child(2) {
+    margin-left: 0;
+  }
+
+  .navigation__togglebtn {
+    display: block;
+  }
+
+  .navigation__togglebtn:hover {
+    opacity: 0.5;
+  }
+
+  .navigation__menu.active,
+  .navigation__check.active {
+    display: block;
+  }
 }
